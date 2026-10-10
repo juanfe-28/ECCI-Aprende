@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Plataforma_Aprendizaje.Views.DetalleCursoPage"
+    Title="Detalle del curso"
+    BackgroundColor="#F5F7FB">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="18">
+
+            <!-- ICONO -->
+
+            <Border
+                x:Name="CursoIcono"
+                BackgroundColor="#DBEAFE"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 20"
+                HeightRequest="160">
+
+                <Label
+                    x:Name="IconoLabel"
+                    Text="💻"
+                    FontSize="80"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+
+            </Border>
+
+
+            <!-- NOMBRE -->
+
+            <VerticalStackLayout Spacing="7">
+
+                <Label
+                    x:Name="NombreCursoLabel"
+                    Text="Desarrollo de Software"
+                    FontSize="28"
+                    FontAttributes="Bold"
+                    TextColor="#1F3A5F"/>
+
+                <Label
+                    x:Name="DescripcionCortaLabel"
+                    Text="Aprende programación y desarrollo de aplicaciones."
+                    FontSize="16"
+                    TextColor="Gray"/>
+
+            </VerticalStackLayout>
+
+
+            <!-- INFORMACIÓN -->
+
+            <Border
+                BackgroundColor="White"
+                StrokeThickness="0"
+                Padding="15"
+                StrokeShape="RoundRectangle 15">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label
+                        Text="Información del curso"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="#1F2937"/>
+
+                    <Label
+                        x:Name="ProfesorLabel"
+                        Text="👨‍🏫 Profesor: Juan Pérez"
+                        FontSize="15"/>
+
+                    <Label
+                        x:Name="DuracionLabel"
+                        Text="⏱ Duración: 40 horas"
+                        FontSize="15"/>
+
+                    <Label
+                        x:Name="CalificacionLabel"
+                        Text="⭐ Calificación: 4.8 / 5"
+                        FontSize="15"/>
+
+                    <Label
+                        x:Name="NivelLabel"
+                        Text="📚 Nivel: Principiante"
+                        FontSize="15"/>
+
+                </VerticalStackLayout>
+
+            </Border>
+
+
+            <!-- DESCRIPCIÓN -->
+
+            <Border
+                BackgroundColor="White"
+                StrokeThickness="0"
+                Padding="15"
+                StrokeShape="RoundRectangle 15">
+
+                <VerticalStackLayout Spacing="10">
+
+                    <Label
+                        Text="Descripción"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="#1F2937"/>
+
+                    <Label
+                        x:Name="DescripcionLabel"
+                        Text="Descripción del curso."
+                        FontSize="15"
+                        TextColor="Gray"/>
+
+                </VerticalStackLayout>
+
+            </Border>
+
+
+            <!-- CONTENIDO -->
+
+            <Border
+                BackgroundColor="White"
+                StrokeThickness="0"
+                Padding="15"
+                StrokeShape="RoundRectangle 15">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label
+                        Text="Contenido del curso"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="#1F2937"/>
+
+                    <Label
+                        x:Name="ContenidoLabel"
+                        Text="Contenido del curso"
+                        FontSize="15"/>
+
+                </VerticalStackLayout>
+
+            </Border>
+
+
+            <!-- BOTÓN -->
+
+            <Button
+                Text="📝 Inscribirme al curso"
+                BackgroundColor="#2563EB"
+                TextColor="White"
+                CornerRadius="12"
+                HeightRequest="55"
+                FontAttributes="Bold"
+                Clicked="OnInscribirmeClicked"/>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

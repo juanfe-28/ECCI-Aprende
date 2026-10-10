@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Plataforma_Aprendizaje.MainPage"
+    Title="Iniciar sesión"
+    BackgroundColor="#F5F7FB">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="30"
+            Spacing="20"
+            VerticalOptions="Center">
+
+            <!-- Logo -->
+            <Label
+                Text="🎓"
+                FontSize="80"
+                HorizontalOptions="Center"/>
+
+            <!-- Título -->
+            <Label
+                Text="ECCI Aprende"
+                FontSize="32"
+                FontAttributes="Bold"
+                TextColor="#1F3A5F"
+                HorizontalOptions="Center"/>
+
+            <Label
+                Text="Tu plataforma de aprendizaje"
+                FontSize="16"
+                TextColor="Gray"
+                HorizontalOptions="Center"/>
+
+            <!-- Espacio -->
+            <BoxView
+                HeightRequest="20"
+                Opacity="0"/>
+
+            <!-- Correo -->
+            <Label
+                Text="Correo electrónico"
+                FontAttributes="Bold"/>
+
+            <Entry
+                Placeholder="ejemplo@correo.com"
+                Keyboard="Email"/>
+
+            <!-- Contraseña -->
+            <Label
+                Text="Contraseña"
+                FontAttributes="Bold"/>
+
+            <Entry
+                Placeholder="Ingrese su contraseña"
+                IsPassword="True"/>
+
+            <!-- Botón -->
+            <Button
+                Text="Iniciar sesión"
+                BackgroundColor="#2563EB"
+                TextColor="White"
+                CornerRadius="12"
+                HeightRequest="55"
+                FontAttributes="Bold"
+                Clicked="OnLoginClicked"/>
+
+            <!-- Registro -->
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Spacing="5">
+
+                <Label Text="¿No tienes una cuenta?"/>
+
+                <Label
+                    Text="Regístrate"
+                    TextColor="#2563EB"
+                    FontAttributes="Bold"/>
+
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

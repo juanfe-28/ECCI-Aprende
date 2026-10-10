@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+ xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+ xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+ x:Class="Plataforma_Aprendizaje.Views.CursosPage"
+ Title="Cursos"
+ BackgroundColor="#F5F7FB">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="18">
+
+            <VerticalStackLayout Spacing="5">
+                <Label
+                Text="Cursos"
+                FontSize="30"
+                FontAttributes="Bold"
+                TextColor="#1F3A5F"/>
+
+                <Label
+                Text="Explora nuestros cursos y comienza a aprender."
+                FontSize="15"
+                TextColor="Gray"/>
+            </VerticalStackLayout>
+
+            <SearchBar
+            x:Name="BuscadorCursos"
+            Placeholder="Buscar por nombre, descripción o categoría..."
+            BackgroundColor="White"
+            TextColor="#0F172A"
+            PlaceholderColor="#64748B"
+            TextChanged="OnBuscadorCursosTextChanged"/>
+
+            <Label
+            Text="Categorías"
+            FontSize="20"
+            FontAttributes="Bold"
+            TextColor="#0F172A"/>
+
+            <ScrollView Orientation="Horizontal">
+                <HorizontalStackLayout Spacing="8">
+                    <Button
+                    Text="Todos"
+                    CommandParameter="Todos"
+                    Clicked="OnCategoriaClicked"
+                    BackgroundColor="#1E3A8A"
+                    TextColor="White"
+                    CornerRadius="10"/>
+
+                    <Button
+                    Text="Tecnología"
+                    CommandParameter="Tecnología"
+                    Clicked="OnCategoriaClicked"
+                    BackgroundColor="#DBEAFE"
+                    TextColor="#1E3A8A"
+                    CornerRadius="10"/>
+
+                    <Button
+                    Text="Diseño"
+                    CommandParameter="Diseño"
+                    Clicked="OnCategoriaClicked"
+                    BackgroundColor="#FEF3C7"
+                    TextColor="#92400E"
+                    CornerRadius="10"/>
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <Label
+            Text="Todos los cursos"
+            FontSize="22"
+            FontAttributes="Bold"
+            TextColor="#1F2937"
+            Margin="0,5,0,0"/>
+
+            <!-- CURSO 1 -->
+            <Border
+            x:Name="TarjetaSoftware"
+            BackgroundColor="White"
+            StrokeThickness="0"
+            Padding="18"
+            StrokeShape="RoundRectangle 15">
+
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="💻" FontSize="45"/>
+
+                    <Label
+                    x:Name="NombreSoftwareLabel"
+                    Text="Desarrollo de Software"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    TextColor="#1F2937"/>
+
+                    <Label
+                    x:Name="DescripcionSoftwareLabel"
+                    Text="Aprende programación y desarrollo de aplicaciones desde cero."
+                    FontSize="14"
+                    TextColor="Gray"/>
+
+                    <Label Text="👨‍🏫 Juan Pérez"
+                       FontSize="13" TextColor="Gray"/>
+
+                    <HorizontalStackLayout Spacing="15">
+                        <Label Text="⏱ 40 horas"
+                           FontSize="13" TextColor="Gray"/>
+                        <Label Text="⭐ 4.8"
+                           FontSize="13" TextColor="Gray"/>
+                    </HorizontalStackLayout>
+
+                    <Button
+                    Text="Ver curso"
+                    BackgroundColor="#2563EB"
+                    TextColor="White"
+                    CornerRadius="10"
+                    CommandParameter="1"
+                    Clicked="OnVerCursoClicked"/>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- CURSO 2 -->
+            <Border
+            x:Name="TarjetaRedes"
+            BackgroundColor="White"
+            StrokeThickness="0"
+            Padding="18"
+            StrokeShape="RoundRectangle 15">
+
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="🌐" FontSize="45"/>
+
+                    <Label
+                    x:Name="NombreRedesLabel"
+                    Text="Redes de Computadores"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    TextColor="#1F2937"/>
+
+                    <Label
+                    x:Name="DescripcionRedesLabel"
+                    Text="Aprende los fundamentos de redes, protocolos y configuración."
+                    FontSize="14"
+                    TextColor="Gray"/>
+
+                    <Label Text="👨‍🏫 Carlos Rodríguez"
+                       FontSize="13" TextColor="Gray"/>
+
+                    <HorizontalStackLayout Spacing="15">
+                        <Label Text="⏱ 50 horas"
+                           FontSize="13" TextColor="Gray"/>
+                        <Label Text="⭐ 4.9"
+                           FontSize="13" TextColor="Gray"/>
+                    </HorizontalStackLayout>
+
+                    <Button
+                    Text="Ver curso"
+                    BackgroundColor="#2563EB"
+                    TextColor="White"
+                    CornerRadius="10"
+                    CommandParameter="2"
+                    Clicked="OnVerCursoClicked"/>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- CURSO 3 -->
+            <Border
+            x:Name="TarjetaBasesDatos"
+            BackgroundColor="White"
+            StrokeThickness="0"
+            Padding="18"
+            StrokeShape="RoundRectangle 15">
+
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="🗄️" FontSize="45"/>
+
+                    <Label
+                    x:Name="NombreBasesDatosLabel"
+                    Text="Bases de Datos"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    TextColor="#1F2937"/>
+
+                    <Label
+                    x:Name="DescripcionBasesDatosLabel"
+                    Text="Aprende SQL, diseño y administración de bases de datos."
+                    FontSize="14"
+                    TextColor="Gray"/>
+
+                    <Label Text="👩‍🏫 Laura Martínez"
+                       FontSize="13" TextColor="Gray"/>
+
+                    <HorizontalStackLayout Spacing="15">
+                        <Label Text="⏱ 35 horas"
+                           FontSize="13" TextColor="Gray"/>
+                        <Label Text="⭐ 4.7"
+                           FontSize="13" TextColor="Gray"/>
+                    </HorizontalStackLayout>
+
+                    <Button
+                    Text="Ver curso"
+                    BackgroundColor="#2563EB"
+                    TextColor="White"
+                    CornerRadius="10"
+                    CommandParameter="3"
+                    Clicked="OnVerCursoClicked"/>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- CURSO 4 -->
+            <Border
+            x:Name="TarjetaDiseno"
+            BackgroundColor="White"
+            StrokeThickness="0"
+            Padding="18"
+            StrokeShape="RoundRectangle 15">
+
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="🎨" FontSize="45"/>
+
+                    <Label
+                    x:Name="NombreDisenoLabel"
+                    Text="Diseño de Interfaces"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    TextColor="#1F2937"/>
+
+                    <Label
+                    x:Name="DescripcionDisenoLabel"
+                    Text="Diseña interfaces modernas, intuitivas y fáciles de usar."
+                    FontSize="14"
+                    TextColor="Gray"/>
+
+                    <Label Text="👩‍🏫 María Gómez"
+                       FontSize="13" TextColor="Gray"/>
+
+                    <HorizontalStackLayout Spacing="15">
+                        <Label Text="⏱ 30 horas"
+                           FontSize="13" TextColor="Gray"/>
+                        <Label Text="⭐ 4.6"
+                           FontSize="13" TextColor="Gray"/>
+                    </HorizontalStackLayout>
+
+                    <Button
+                    Text="Ver curso"
+                    BackgroundColor="#2563EB"
+                    TextColor="White"
+                    CornerRadius="10"
+                    CommandParameter="4"
+                    Clicked="OnVerCursoClicked"/>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- MENSAJE INDEPENDIENTE DE LAS TARJETAS -->
+            <Label
+            x:Name="EstadoSinResultados"
+            Text="No encontramos cursos que coincidan con tu búsqueda."
+            FontSize="14"
+            TextColor="#64748B"
+            HorizontalTextAlignment="Center"
+            IsVisible="False"
+            Margin="0,10"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

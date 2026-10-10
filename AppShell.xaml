@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Plataforma_Aprendizaje.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Plataforma_Aprendizaje"
+    xmlns:views="clr-namespace:Plataforma_Aprendizaje.Views"
+    Title="ECCI Aprende"
+    FlyoutBehavior="Disabled">
+
+    <ShellContent
+        Title="Iniciar sesión"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <TabBar Route="Principal">
+        <ShellContent
+            Title="Inicio"
+            Route="HomePage"
+            ContentTemplate="{DataTemplate views:HomePage}" />
+
+        <ShellContent
+            Title="Cursos"
+            Route="CursosPage"
+            ContentTemplate="{DataTemplate views:CursosPage}" />
+    </TabBar>
+
+</Shell>

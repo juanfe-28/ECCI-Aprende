@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Plataforma_Aprendizaje.Views.HomePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Inicio"
+    BackgroundColor="#F8FAFC">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="22" Spacing="22">
+
+            <!-- ENCABEZADO -->
+            <Grid ColumnDefinitions="*,Auto"
+                  ColumnSpacing="12">
+
+                <VerticalStackLayout Spacing="5"
+                                     VerticalOptions="Center">
+
+                    <Label Text="ECCI APRENDE"
+                           FontSize="13"
+                           FontAttributes="Bold"
+                           TextColor="#F59E0B"
+                           CharacterSpacing="2" />
+
+                    <Label Text="¡Hola, estudiante!"
+                           FontSize="27"
+                           FontAttributes="Bold"
+                           TextColor="#1E3A8A" />
+
+                    <Label Text="Tu próximo logro comienza hoy."
+                           FontSize="14"
+                           TextColor="#475569" />
+
+                </VerticalStackLayout>
+
+                <Border Grid.Column="1"
+                        WidthRequest="58"
+                        HeightRequest="58"
+                        BackgroundColor="#DBEAFE"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 18"
+                        VerticalOptions="Center">
+
+                    <Label Text="🎓"
+                           FontSize="30"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                </Border>
+
+            </Grid>
+
+            <!-- TARJETA PRINCIPAL -->
+            <Border BackgroundColor="#1E3A8A"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 22"
+                    Padding="20">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label Text="TU ESPACIO DE APRENDIZAJE"
+                           FontSize="12"
+                           FontAttributes="Bold"
+                           TextColor="#DBEAFE"
+                           CharacterSpacing="1" />
+
+                    <Label Text="Aprende algo nuevo hoy"
+                           FontSize="23"
+                           FontAttributes="Bold"
+                           TextColor="White" />
+
+                    <Label Text="Explora cursos, desarrolla habilidades y avanza hacia tus metas."
+                           FontSize="14"
+                           TextColor="#E2E8F0"
+                           LineBreakMode="WordWrap" />
+
+                    <Button Text="Explorar cursos  →"
+                            Clicked="OnCursosClicked"
+                            BackgroundColor="#F59E0B"
+                            TextColor="#0F172A"
+                            FontAttributes="Bold"
+                            CornerRadius="12"
+                            HeightRequest="48"
+                            HorizontalOptions="Start" />
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <!-- BUSCADOR -->
+            <VerticalStackLayout Spacing="10">
+
+                <Label Text="¿Qué quieres aprender?"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       TextColor="#0F172A" />
+
+                <SearchBar x:Name="BuscadorCursos"
+                           Placeholder="Buscar un curso..."
+                           BackgroundColor="White"
+                           TextColor="#0F172A"
+                           PlaceholderColor="#64748B"
+                           SearchButtonPressed="OnBuscarCursosClicked" />
+
+            </VerticalStackLayout>
+
+            <!-- CATEGORÍAS -->
+            <VerticalStackLayout Spacing="12">
+
+                <Label Text="Explora por categoría"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       TextColor="#0F172A" />
+
+                <Grid ColumnDefinitions="*,*"
+                      ColumnSpacing="12">
+
+                    <!-- CATEGORÍA TECNOLOGÍA -->
+                    <Border Grid.Column="0"
+                            BackgroundColor="White"
+                            Stroke="#E2E8F0"
+                            StrokeThickness="1"
+                            StrokeShape="RoundRectangle 18"
+                            Padding="14">
+
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="OnTecnologiaClicked" />
+                        </Border.GestureRecognizers>
+
+                        <VerticalStackLayout Spacing="8">
+
+                            <Label Text="💻"
+                                   FontSize="30" />
+
+                            <Label Text="Tecnología"
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   TextColor="#1E3A8A" />
+
+                            <Label Text="3 cursos disponibles"
+                                   FontSize="12"
+                                   TextColor="#475569" />
+
+                            <Label Text="Explorar →"
+                                   FontSize="13"
+                                   FontAttributes="Bold"
+                                   TextColor="#F59E0B" />
+
+                        </VerticalStackLayout>
+
+                    </Border>
+
+                    <!-- CATEGORÍA DISEÑO -->
+                    <Border Grid.Column="1"
+                            BackgroundColor="White"
+                            Stroke="#E2E8F0"
+                            StrokeThickness="1"
+                            StrokeShape="RoundRectangle 18"
+                            Padding="14">
+
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="OnDisenoClicked" />
+                        </Border.GestureRecognizers>
+
+                        <VerticalStackLayout Spacing="8">
+
+                            <Label Text="🎨"
+                                   FontSize="30" />
+
+                            <Label Text="Diseño"
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   TextColor="#1E3A8A" />
+
+                            <Label Text="1 curso disponible"
+                                   FontSize="12"
+                                   TextColor="#475569" />
+
+                            <Label Text="Explorar →"
+                                   FontSize="13"
+                                   FontAttributes="Bold"
+                                   TextColor="#F59E0B" />
+
+                        </VerticalStackLayout>
+
+                    </Border>
+
+                </Grid>
+
+            </VerticalStackLayout>
+
+            <!-- CURSOS DESTACADOS -->
+            <VerticalStackLayout Spacing="12">
+
+                <Grid ColumnDefinitions="*,Auto">
+
+                    <Label Text="Cursos destacados"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#0F172A"
+                           VerticalOptions="Center" />
+
+                    <Label Grid.Column="1"
+                           Text="Ver todos →"
+                           FontSize="13"
+                           FontAttributes="Bold"
+                           TextColor="#1E3A8A"
+                           VerticalOptions="Center">
+
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="OnCursosClicked" />
+                        </Label.GestureRecognizers>
+
+                    </Label>
+
+                </Grid>
+
+                <!-- CURSO DE SOFTWARE -->
+                <Border BackgroundColor="White"
+                        Stroke="#E2E8F0"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 18"
+                        Padding="15">
+
+                    <Grid ColumnDefinitions="Auto,*"
+                          ColumnSpacing="14">
+
+                        <Border WidthRequest="64"
+                                HeightRequest="64"
+                                BackgroundColor="#DBEAFE"
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 14"
+                                VerticalOptions="Start">
+
+                            <Label Text="💻"
+                                   FontSize="30"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center" />
+                        </Border>
+
+                        <VerticalStackLayout Grid.Column="1"
+                                             Spacing="6">
+
+                            <Label Text="TECNOLOGÍA"
+                                   FontSize="10"
+                                   FontAttributes="Bold"
+                                   TextColor="#0284C7"
+                                   CharacterSpacing="1" />
+
+                            <Label Text="Desarrollo de Software"
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   TextColor="#0F172A" />
+
+                            <Label Text="Aprende a crear aplicaciones y soluciones digitales."
+                                   FontSize="12"
+                                   TextColor="#475569"
+                                   LineBreakMode="WordWrap" />
+
+                            <Button Text="Ver curso"
+                                    Clicked="OnVerSoftwareClicked"
+                                    BackgroundColor="#1E3A8A"
+                                    TextColor="White"
+                                    CornerRadius="10"
+                                    HeightRequest="40"
+                                    HorizontalOptions="Start" />
+
+                        </VerticalStackLayout>
+
+                    </Grid>
+
+                </Border>
+
+                <!-- CURSO DE DISEÑO -->
+                <Border BackgroundColor="White"
+                        Stroke="#E2E8F0"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 18"
+                        Padding="15">
+
+                    <Grid ColumnDefinitions="Auto,*"
+                          ColumnSpacing="14">
+
+                        <Border WidthRequest="64"
+                                HeightRequest="64"
+                                BackgroundColor="#FEF3C7"
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 14"
+                                VerticalOptions="Start">
+
+                            <Label Text="🎨"
+                                   FontSize="30"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center" />
+                        </Border>
+
+                        <VerticalStackLayout Grid.Column="1"
+                                             Spacing="6">
+
+                            <Label Text="DISEÑO"
+                                   FontSize="10"
+                                   FontAttributes="Bold"
+                                   TextColor="#B45309"
+                                   CharacterSpacing="1" />
+
+                            <Label Text="Diseño de Interfaces"
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   TextColor="#0F172A" />
+
+                            <Label Text="Descubre cómo crear experiencias digitales atractivas."
+                                   FontSize="12"
+                                   TextColor="#475569"
+                                   LineBreakMode="WordWrap" />
+
+                            <Button Text="Ver curso"
+                                    Clicked="OnVerDisenoClicked"
+                                    BackgroundColor="#1E3A8A"
+                                    TextColor="White"
+                                    CornerRadius="10"
+                                    HeightRequest="40"
+                                    HorizontalOptions="Start" />
+
+                        </VerticalStackLayout>
+
+                    </Grid>
+
+                </Border>
+
+            </VerticalStackLayout>
+
+            <!-- PIE DE PÁGINA -->
+            <Label Text="ECCI Aprende · Tu camino al conocimiento"
+                   FontSize="12"
+                   TextColor="#64748B"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,4,0,12" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
